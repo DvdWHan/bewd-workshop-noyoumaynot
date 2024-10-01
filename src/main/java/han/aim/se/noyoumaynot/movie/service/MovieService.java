@@ -9,27 +9,27 @@ import java.util.ArrayList;
 
 @Service
 public class MovieService {
-    private MovieList movieList;
+  private MovieList movieList;
 
-    @Autowired
-    public MovieService(MovieList movieList) {
-        this.movieList = movieList;
-    }
+  @Autowired
+  public MovieService(MovieList movieList) {
+    this.movieList = movieList;
+  }
 
-    public ArrayList<Movie> getMovieList() {
-        return movieList.getMovieList();
-    }
+  public ArrayList<Movie> getMovieList() {
+    return movieList.getMovieList();
+  }
 
-    public Movie getMovieById(String movieId) {
-        return movieList.findMovieById(movieId);
-    }
+  public Movie getMovieById(String movieId) {
+    return movieList.findMovieById(movieId);
+  }
 
-    public void insertMovie(Movie movie) {
-        movieList.add(movie);
-    }
+  public void insertMovie(Movie movie) {
+    movieList.add(movie);
+  }
 
-    public void deleteMovie(String movieId) {
-        movieList.delete(movieList.findMovieById(movieId));
+  public void deleteMovie(String movieId) {
+    movieList.delete(movieList.findMovieById(movieId));
 
-    }
+  }
 }
